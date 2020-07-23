@@ -1,0 +1,23 @@
+SQL CREATE TABLE
+
+
+sqlite> BEGIN;
+sqlite> CREATE TABLE card(cardno NUMERIC PRIMARY KEY, id INTEGER, expiry TEXT, pin NUMERIC);
+sqlite> COMMIT;
+
+sqlite> .tables
+
+
+sqlite> .fullschema
+
+
+sqlite> BEGIN;
+sqlite> INSERT INTO card(cardno, expiry, pin) values(12345678, "12/22", 123);
+sqlite> COMMIT;
+
+
+sqlite> SELECT * FROM card;
+
+sqlite> DROP TABLE card;
+
+sqlite>.exit
