@@ -1,0 +1,11 @@
+sudo raspi-config
+sudo nano /etc/modules
+i2c-dev
+sudo nano /boot/config.txt
+sudo apt-get install i2c-tools
+dtparam=i2c_arm=on
+sudo reboot
+sudo i2cdetect -y 1
+
+pip3 install RPI.GPIO adafruit-blinka
+sudo pip3 install adafruit-circuitpython-ads1x15
